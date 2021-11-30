@@ -40,7 +40,7 @@ app.post("/api/articles/new" ,async(req, res) => {
 missing", null)); return; }
  let tox = await getToxicity(payload["body"].replace(/<[^>]*>?/gm, ''));
  if (tox >= 0.5) {
- res.send(errorViews. ("You content seems to be toxic!"));
+ res.send(errorViews.  ("You content seems to be toxic!"));
  return;
  }
  let oneInsert = await
